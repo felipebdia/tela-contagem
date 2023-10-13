@@ -10,21 +10,15 @@
         <h1>Vamos contar</h1>
     </header>
     <section>
-        <div>
-            Início: <input type="number" name="inicio" id="inicio">
+        <div id="dados">
+           <p>Início: <input type="number" name="inicio" id="txti"></p>
+           <p>Fim : <input type="number" name="fim" id="txtf"></p>
+           <p>Passo: <input type="number" name="passo" id="txtp"></p>
+           <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
-        <div>
-           Fim: <input type="number" name="fim" id="ifim">
+        <div id="res">
+          Preparando a contagem...
         </div>
-        <div>
-            Passo: <input type="number" name="passo" id="ipasso">
-         </div>
-         <input type="submit" value="Contar" onclick="contar()">
-         <div>
-            Contando: <br>
-            
-         </div>
-    </section>
     <footer>
         <p><a href="https://github.com/felipebdia">Felipe Badia</a></p>
     </footer>

@@ -1,10 +1,27 @@
-var i = document.getElementById('inicio')
-var f = document.getElementById('ifim')
-var p = document.getElementById('ipasso')
-var res = ''
-
 function contar(){
-    while (res < f){
-        i + p 
-    } 
+    let ini = document.getElementById('txti')
+    let fim = document.getElementById('txtf')
+    let passo  = document.getElementById('txtp')
+    let res = document.getElementById('res')
+
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+        alert('[ERRO] Faltam dados!')
+    } else {
+        res.innerHTML = 'Contando: '
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        if (i < f) {
+            // Contagem crescente
+             for (let c = i; c <= f; c += p){
+                res.innerHTML += `${c}  \u{1F449}	`
+            }
+        } else {
+            // Contagem regressiva
+                for (let c = i; c >= f; c -= p) {
+                    res.innerHTML += `${c}  \u{1F449}	`
+                }
+            } 
+            res.innerHTML += `\u{1F3C1}`
+    }
 }
